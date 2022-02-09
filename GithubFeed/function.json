@@ -1,11 +1,15 @@
 {
     "disabled": false,
-    "scriptFile": "../dist/github-feed.js",
+    "scriptFile": "../dist/GithubFeed/github-feed.js",
     "bindings": [{
         "type": "httpTrigger",
         "direction": "in",
         "authLevel": "function",
         "methods": ["POST"],
         "route": "webhooks/github"
-    }]
+    }, {
+        "type": "http",
+        "direction": "out",
+        "name": "res"
+    }] 
 }
